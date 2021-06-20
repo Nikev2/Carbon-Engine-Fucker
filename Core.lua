@@ -142,6 +142,7 @@ end
 local Data = http:JSONDecode(readfile(filename))
 function refreshData()
    Ammo = Data.Ammo
+   print(Data.Ammo)
 end
     function refreshConfig()
     
