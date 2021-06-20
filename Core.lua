@@ -1,9 +1,5 @@
 local http = game:GetService("HttpService")
 local filename = "CarbonSettings.JSON"
-frame = nil
-frame.Draggable = true
-frame.Active = true
-frame.Selectable = true
 if syn or PROTOSMASHER_LOADED then
     print('player is using synapse')
     else
