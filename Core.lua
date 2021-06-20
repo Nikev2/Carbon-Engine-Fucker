@@ -151,12 +151,8 @@ function refreshData()
         v = vv
         print(SettingsData.Ammo)
     end
+   end
+end
     function refreshConfig()
     
     end
-
-
-
-
-
-
