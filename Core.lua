@@ -142,7 +142,6 @@ end
 local Data = http:JSONDecode(readfile(filename))
 function refreshData()
 SettingsData.Ammo = Data.Ammo
-Data.Ammo = 52
 end
     function refreshConfig()
     
