@@ -104,7 +104,6 @@ local SettingsData = {
 		SprintWalkIntensity = 0.18;
 		SprintWalkAnimSpeed = 15;
 }
-FILE = nil
 if not isfile(filename) then
 local EncodeLib = http:JSONEncode(SettingsData)
 writefile(filename, EncodeLib)
@@ -152,3 +151,4 @@ end
     function refreshConfig()
     
     end
+    refreshData()
