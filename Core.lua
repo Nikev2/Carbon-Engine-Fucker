@@ -141,12 +141,7 @@ end
 
 local Data = http:JSONDecode(readfile(filename))
 function refreshData()
-   for i,v in pairs(SettingsData) do
-    for i,vv in pairs(Data) do
-        v = vv
-        print(SettingsData.Ammo)
-    end
-   end
+   Ammo = Data.Ammo
 end
     function refreshConfig()
     
