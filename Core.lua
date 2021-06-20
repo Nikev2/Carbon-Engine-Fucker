@@ -13,8 +13,8 @@ if syn or PROTOSMASHER_LOADED then
     msg:Destroy()
     end
 local SettingsData = {
-    Ammo = 5;
-		StoredAmmo = 30;
+    Ammo = 30;
+		StoredAmmo = math.huge;
 		ExplosiveAmmo = 3;
 		BaseDamage = 45;
 		LimbDamage = 35;
@@ -149,7 +149,7 @@ function refreshData()
    for i,v in pairs(SettingsData) do
     for i,vv in pairs(Data) do
         v = vv
-        print('Ammo')
+        print(SettingsData.Ammo)
     end
     function refreshConfig()
     
