@@ -9,38 +9,39 @@ if syn or PROTOSMASHER_LOADED then
     msg:Destroy()
     end
 local SettingsData = {
-    Ammo = 30;
-		StoredAmmo = math.huge;
-		ExplosiveAmmo = 3;
-		BaseDamage = 45;
-		LimbDamage = 35;
-		ArmorDamage = 15;
-		HeadDamage = 110;
-		EShieldDamage = 10;
+    
+    Ammo = 30,
+		StoredAmmo = 200,
+		ExplosiveAmmo = 3,
+		BaseDamage = 45,
+		LimbDamage = 35,
+		ArmorDamage = 15,
+		HeadDamage = 110,
+		EShieldDamage = 10,
 		
-		gunRecoilMin = 20; -- How much the gun recoils backwards when not aiming
-		gunRecoilMax = 35; -- How much the gun recoils backwards when not aiming
+		gunRecoilMin = 20, -- How much the gun recoils backwards when not aiming
+		gunRecoilMax = 35, -- How much the gun recoils backwards when not aiming
 
-		AimGunRecoilMin = 2; -- How much the gun recoils backwards when aiming
-		AimGunRecoilMax = 10; -- How much the gun recoils backwards when aiming
+		AimGunRecoilMin = 2, -- How much the gun recoils backwards when aiming
+		AimGunRecoilMax = 10, -- How much the gun recoils backwards when aiming
 
-		KickbackMin = 3; -- Upward gun rotation when not aiming
-		KickbackMax = 4; -- Upward gun rotation when not aiming
+		KickbackMin = 3, -- Upward gun rotation when not aiming
+		KickbackMax = 4,-- Upward gun rotation when not aiming
 
-		AimKickbackMin = 2.5; -- Upward gun rotation when aiming
-		AimKickbackMax = 2.5; -- Upward gun rotation when aiming
+		AimKickbackMin = 2.5, -- Upward gun rotation when aiming
+		AimKickbackMax = 2.5, -- Upward gun rotation when aiming
 
-		SideKickMin = -1;
-		SideKickMax = 1;
+		SideKickMin = -1,
+		SideKickMax = 1,
 
-		AimSideKickMin = -1;
-		AimSideKickMax = 1;
+		AimSideKickMin = -1,
+		AimSideKickMax = 1,
 
-		CamShakeMin = 2;
-		CamShakeMax = 3;
+		CamShakeMin = 2,
+		CamShakeMax = 3,
 
-		AimCanShakeMin = 1;
-		AimCamShakeMax = 2;
+		AimCanShakeMin = 1,
+		AimCamShakeMax = 2,
 	
 	--// Handling
 		Firerate = 60 / 720; -- 60 = 1 Minute, 700 = Rounds per that 60 seconds. DO NOT TOUCH THE 60!
@@ -70,20 +71,14 @@ local SettingsData = {
 		MouseSensitivity = 0.5; -- Number between 0.1 and 1
 		SensitivityIncrement = 0.05; -- No touchy
 		
-	-- Tracer Config
-		TracerTransparency = 0.3;
-		TracerLightEmission = 1;
-		TracerTextureLength = 1;
-		TracerLifetime = 0.12;
-		TracerFaceCamera = true;
-		TracerColor = BrickColor.new('Deep orange');
+
 		
 	--// Bullet Physics
-		BulletPhysics = Vector3.new(0,55,0); -- Drop fixation: Lower number = more drop
+		 
 		BulletSpeed = 2000; -- Bullet Speed
 		BulletSpread = 0; -- How much spread the bullet has
 		
-		ExploPhysics = Vector3.new(0,20,0); -- Drop for explosive rounds
+		
 		ExploSpeed = 600; -- Speed for explosive rounds
 		
 		BulletHopUpMult = 0.005; -- Hop up mutliplier
@@ -141,7 +136,7 @@ end
 
 local Data = http:JSONDecode(readfile(filename))
 function refreshData()
-SettingsData.Ammo = Data.Ammo
+
 end
     function refreshConfig()
     
