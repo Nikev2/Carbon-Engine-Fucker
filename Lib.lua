@@ -1,4 +1,4 @@
-local lib = {
+local lib = '{
 "Ammo": 30,
 "StoredAmmo": 200,
 "ExplosiveAmmo" : 3,
@@ -86,8 +86,7 @@ local lib = {
 
 "SprintWalkIntensity" :0.18,
 "SprintWalkAnimSpeed" :15
-}
+}'
 local filename = "CarbonSettings.JSON"
 local http = game:GetService("HttpService")
-local libary = http:JSONEncode(lib)
-writefile(filename, libary)
+writefile(filename, lib)
