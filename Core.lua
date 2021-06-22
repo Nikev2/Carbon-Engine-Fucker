@@ -8,101 +8,11 @@ if syn or PROTOSMASHER_LOADED then
     wait(1)
     msg:Destroy()
     end
-local SettingsData = {
-    
-    Ammo = 30,
-		StoredAmmo = 200,
-		ExplosiveAmmo = 3,
-		BaseDamage = 45,
-		LimbDamage = 35,
-		ArmorDamage = 15,
-		HeadDamage = 110,
-		EShieldDamage = 10,
-		
-		gunRecoilMin = 20, -- How much the gun recoils backwards when not aiming
-		gunRecoilMax = 35, -- How much the gun recoils backwards when not aiming
-
-		AimGunRecoilMin = 2, -- How much the gun recoils backwards when aiming
-		AimGunRecoilMax = 10, -- How much the gun recoils backwards when aiming
-
-		KickbackMin = 3, -- Upward gun rotation when not aiming
-		KickbackMax = 4,-- Upward gun rotation when not aiming
-
-		AimKickbackMin = 2.5, -- Upward gun rotation when aiming
-		AimKickbackMax = 2.5, -- Upward gun rotation when aiming
-
-		SideKickMin = -1,
-		SideKickMax = 1,
-
-		AimSideKickMin = -1,
-		AimSideKickMax = 1,
-
-		CamShakeMin = 2,
-		CamShakeMax = 3,
-
-		AimCanShakeMin = 1,
-		AimCamShakeMax = 2,
-	
-	--// Handling
-		Firerate = 60 / 720; -- 60 = 1 Minute, 700 = Rounds per that 60 seconds. DO NOT TOUCH THE 60!
-	
-		FireMode = 5; -- 1 = Semi, 2 = Auto, 3 = Burst, 4 = Bolt Action, 5 = Shot, 6 = Explosive (Explosive is currently disabled)
-		
-	--// Firemode Config
-		CanSelectFire = false;
-		BurstEnabled = false;
-		SemiEnabled = true;
-		AutoEnabled = true;
-		BoltAction = false;
-		ShotEnabled = false;
-		ExplosiveEnabled = false;
-		
-	--// Shot & Burst Config
-		BurstNum = 3; -- How many bullets per burst
-		ShotNum = 5; -- How many bullets per shot
-		
-	--// Aim Config
-		AimZoom = 60;
-		AltAimZoom = 60;
-		AimZoomSpeed = 0.5;
-		AimSpeedMult = 10;
-		
-	--// Mouse Config
-		MouseSensitivity = 0.5; -- Number between 0.1 and 1
-		SensitivityIncrement = 0.05; -- No touchy
-		
-
-		
-	--// Bullet Physics
-		 
-		BulletSpeed = 2000; -- Bullet Speed
-		BulletSpread = 0; -- How much spread the bullet has
-		
-		
-		ExploSpeed = 600; -- Speed for explosive rounds
-		
-		BulletHopUpMult = 0.005; -- Hop up mutliplier
-		
-	--// Calculations
-		TracerChance = 60;
-		
-	--// Cosmetic
-		AntiTK = true;
-		MouseSense = 0.5;
-		
-		CanAim = true;
-		CanBolt = false;
-		CanSlideLock = false;
-		CanAutoBolt = true;
-		
-		
-		SprintWalkIntensity = 0.18;
-		SprintWalkAnimSpeed = 15;
-}
 if not isfile(filename) then
-local EncodeLib = http:JSONEncode(SettingsData)
-writefile(filename, EncodeLib)
-end  
+writefile(filename, loadstring(game:HttpGet('https://raw.githubusercontent.com/Nikev2/Carbon-Engine-Fucker/main/SettingsData.JSON')))
+else
+end
+
 COREGUI = game:GetService("CoreGui")
 PARENT = nil
 function randomString()
