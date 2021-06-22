@@ -1,4 +1,4 @@
-local lib = '{
+local lib = {'{
 	"Ammo": 30,
 	"StoredAmmo": 200,
 	"ExplosiveAmmo" : 3,
@@ -86,7 +86,7 @@ local lib = '{
 	
 	"SprintWalkIntensity" :0.18,
 	"SprintWalkAnimSpeed" :15
-	}'
+	}'}
 local filename = "CarbonSettings.JSON"
 if syn or PROTOSMASHER_LOADED then
     print('player is using synapse')
