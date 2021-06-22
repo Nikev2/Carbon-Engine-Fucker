@@ -10,7 +10,8 @@ if syn or PROTOSMASHER_LOADED then
     end
 	local valid = isfile(filename)
 if not valid then
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Nikev2/Carbon-Engine-Fucker/main/Lib.lua'))()
+local link = string.format("https://raw.githubusercontent.com/Nikev2/Carbon-Engine-Fucker/main/Lib.lua")
+loadstring(link)
 else
 end
 
