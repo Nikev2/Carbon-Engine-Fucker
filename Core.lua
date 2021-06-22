@@ -1,5 +1,5 @@
 
-local filename = "CarbonSettings.JSON"
+
 if syn or PROTOSMASHER_LOADED then
     print('player is using synapse')
     else
@@ -8,9 +8,9 @@ if syn or PROTOSMASHER_LOADED then
     wait(1)
     msg:Destroy()
     end
-	local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/Nikev2/Carbon-Engine-Fucker/main/SettingsData.JSON'))()
+	
 if not isfile(filename) then
-writefile(filename, lib)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Nikev2/Carbon-Engine-Fucker/main/Lib.lua'))()
 else
 end
 
