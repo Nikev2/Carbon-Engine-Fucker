@@ -11,7 +11,8 @@ if syn or PROTOSMASHER_LOADED then
 	local valid = isfile(filename)
 if not valid then
 local link = string.format("https://raw.githubusercontent.com/Nikev2/Carbon-Engine-Fucker/main/Lib.lua")
-loadstring(link)
+local response = game:HttpGetAsync(link)
+loadstring(response)
 else
 end
 
@@ -46,7 +47,7 @@ else
 	PARENT = Main
 end
 
-local Data = http:JSONDecode(readfile(filename))
+
 function refreshData()
 
 end
