@@ -1,4 +1,4 @@
-local http = game:GetService("HttpService")
+
 local filename = "CarbonSettings.JSON"
 if syn or PROTOSMASHER_LOADED then
     print('player is using synapse')
