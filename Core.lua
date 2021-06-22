@@ -8,8 +8,9 @@ if syn or PROTOSMASHER_LOADED then
     wait(1)
     msg:Destroy()
     end
+	local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/Nikev2/Carbon-Engine-Fucker/main/SettingsData.JSON'))()
 if not isfile(filename) then
-writefile(filename, loadstring(game:HttpGet('https://raw.githubusercontent.com/Nikev2/Carbon-Engine-Fucker/main/SettingsData.JSON')))
+writefile(filename, lib)
 else
 end
 
