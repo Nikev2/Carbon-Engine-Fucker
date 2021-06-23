@@ -137,9 +137,9 @@ else
 	PARENT = Main
 end
 
-local Config = http:JSONDecode(lib)
+local Config = http:JSONDecode(readfile(filename))
 function refreshData()
-	Config.Ammo = 21
+Config.Ammo = 21
 print(Config.Ammo)
 end
     function refreshConfig()
