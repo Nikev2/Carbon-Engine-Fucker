@@ -137,9 +137,10 @@ else
 	PARENT = Main
 end
 
-
+local Config = http:JSONDecode(lib)
 function refreshData()
-
+	Config.Ammo = 21
+print(Config.Ammo)
 end
     function refreshConfig()
     
