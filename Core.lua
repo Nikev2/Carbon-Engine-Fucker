@@ -137,11 +137,67 @@ else
 end
 
 local Config = http:JSONDecode(readfile(filename))
-function refreshData()
-Config.Ammo = 21
-print(Config.Ammo)
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local SelectionFrame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+SelectionFrame.Visible = false
+TextBox.Parent = SelectionFrame
+TextLabel.Parent = SelectionFrame
+ScrollingFrame.Parent = PARENT
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.Position = UDim2.new(0.290745288, 0, 0.233060718, 0)
+ScrollingFrame.Size = UDim2.new(0, 292, 0, 309)
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+function refresh()
+	local player = game.Players.LocalPlayer
+     local Backpack = player.Backpack
+    for i,v in pairs(Backpack:GetChildren()) do
+		if v.ClassName == 'Tool' then
+            for i,vv in pairs(v:GetChildren()) do
+                if vv.Name == 'ConfigMods' then
+                    for i,x in pairs(vv:GetChildren()) do
+                        if x.Name == 'CConfig' then
+                       local Module = require(x)
+					   Module.Ammo = Config.Ammo
+						 
+						
+					
+					    end
+					end
+				end
+			end
+		end
+		end
 end
-    function refreshConfig()
-    
-    end
-    refreshData()
+local Ammo = SelectionFrame:Clone()
+Ammo.Visible = true
+Ammo.Name = "Ammo"
+Ammo.Parent = ScrollingFrame
+Ammo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Ammo.Size = UDim2.new(0, 254, 0, 61)
+Ammo.TextBox.Text = Ammo.Name
+Ammo.TextBox.Changed:Connect(function()
+Config.Ammo = Ammo.TextBox.Text
+print(Config.Ammo)
+end)
+local StoredAmmo = SelectionFrame:Clone()
+StoredAmmo.Visible = true
+StoredAmmo.Name = "Ammo"
+StoredAmmo.Parent = ScrollingFrame
+StoredAmmo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StoredAmmo.Size = UDim2.new(0, 254, 0, 61)
+StoredAmmo.TextBox.Text = StoredAmmo.Name
+
+
+
+
+
+
+
+
+
+
