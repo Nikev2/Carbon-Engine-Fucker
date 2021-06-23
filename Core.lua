@@ -2,7 +2,6 @@ local lib = [[
 	{
 "Ammo": 30,
 "StoredAmmo": 200,
-"ExplosiveAmmo" : 3,
 "BaseDamage" : 45,
 "LimbDamage" : 35,
 "ArmorDamage" : 15,
