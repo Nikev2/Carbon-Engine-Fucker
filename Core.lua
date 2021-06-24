@@ -135,8 +135,8 @@ else
 	Main.Parent = COREGUI
 	PARENT = Main
 end
-
-local Config = http:JSONDecode(readfile(filename))
+local read = readfile(filename)
+local Config = http:JSONDecode(read)
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
 local SelectionFrame = Instance.new("Frame")
