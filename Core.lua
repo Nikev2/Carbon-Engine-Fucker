@@ -103,7 +103,7 @@ if not valid then
 	local filename = "CarbonSettings.JSON"
 	local http = game:GetService("HttpService")
 	writefile(filename, lib)
-else
+elseif valid then
 	delfile(filename)
 	writefile(filename, lib)
 end
@@ -139,7 +139,7 @@ else
 	PARENT = Main
 end
 local read = readfile(filename)
-local Config = http:JSONDecode(read)
+local Config = http:JSONDecode(read.CConfig)
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
 local SelectionFrame = Instance.new("Frame")
