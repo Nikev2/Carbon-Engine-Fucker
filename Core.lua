@@ -89,6 +89,7 @@ local lib = [[
 	}
 }
 ]]
+local valid = isfile(filename)
 local filename = "CarbonSettings.JSON"
 if syn or PROTOSMASHER_LOADED then
     print('player is using synapse')
@@ -98,7 +99,7 @@ if syn or PROTOSMASHER_LOADED then
     wait(1)
     msg:Destroy()
     end
-	local valid = isfile(filename)
+	
 if not valid then
 	local filename = "CarbonSettings.JSON"
 	local http = game:GetService("HttpService")
