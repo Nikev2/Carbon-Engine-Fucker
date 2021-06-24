@@ -89,8 +89,9 @@ local lib = [[
 	}
 }
 ]]
-local valid = isfile(filename)
+
 local filename = "CarbonSettings.JSON"
+local valid = isfile(filename)
 if syn or PROTOSMASHER_LOADED then
     print('player is using synapse')
     else
