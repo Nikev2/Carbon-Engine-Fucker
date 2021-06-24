@@ -104,6 +104,8 @@ if not valid then
 	local http = game:GetService("HttpService")
 	writefile(filename, lib)
 else
+	delfile(filename)
+	writefile(filename, lib)
 end
 
 COREGUI = game:GetService("CoreGui")
