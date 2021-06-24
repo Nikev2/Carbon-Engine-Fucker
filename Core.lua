@@ -140,12 +140,13 @@ else
 	PARENT = Main
 end
 local read = readfile(filename)
-local Config = http:JSONDecode(read.CConfig)
+
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
 local SelectionFrame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
+local ConfigAmmo = http:JSONDecode(read.CConfig.Ammo)
 SelectionFrame.Visible = false
 TextBox.Parent = SelectionFrame
 TextLabel.Parent = SelectionFrame
@@ -166,7 +167,8 @@ function refresh()
                     for i,x in pairs(vv:GetChildren()) do
                         if x.Name == 'CConfig' then
                        local Module = require(x)
-					   Module.Ammo = Config.Ammo
+					   
+					   Module.Ammo = ConfigAmmo
 						 
 						
 					
@@ -183,14 +185,14 @@ Ammo.Name = "Ammo"
 Ammo.Parent = ScrollingFrame
 Ammo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Ammo.Size = UDim2.new(0, 254, 0, 61)
-Ammo.TextBox.Text = Ammo.Name
+Ammo.TextBox.Text = ConfigAmmo
+Ammo.TextLabel.Text = Ammo.Name
 Ammo.TextBox.Changed:Connect(function()
-Config.Ammo = Ammo.TextBox.Text
-print(Config.Ammo)
+print(ConfigAmmo)
 end)
 local StoredAmmo = SelectionFrame:Clone()
 StoredAmmo.Visible = true
-StoredAmmo.Name = "Ammo"
+StoredAmmo.Name = "StoredAmmo"
 StoredAmmo.Parent = ScrollingFrame
 StoredAmmo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 StoredAmmo.Size = UDim2.new(0, 254, 0, 61)
